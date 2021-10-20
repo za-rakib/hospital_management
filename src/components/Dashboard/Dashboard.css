@@ -1,0 +1,27 @@
+ *{
+   margin: 0px;
+   padding:0px;
+ }
+ .dashboard{
+	font-family: system-ui;
+  height: 100vh;
+  background-color: #343958;
+ }
+ .sidebar{
+   background-color:#272c4a;
+   height: 100vh;
+ }
+ .calendar{
+  margin-top: 50px;
+ }
+ .appointmentData{
+  margin-top: 50px;
+  height:auto;
+ }
+.dashboardLogo{
+  color:#32d390;
+  font-family: 'Ubuntu', sans-serif;
+}
+.dashboardLogo span{
+  color:white;
+}

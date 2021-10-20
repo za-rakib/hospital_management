@@ -1,0 +1,23 @@
+*{
+	padding: 0;
+	margin: 0
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.img{
+	align-items: center;
+}
+.img img{
+	width: 450px;
+    height: auto;
+    margin-left: 20px;
+}
+.login-content{
+	align-items: center;
+	/* text-align: center; */
+}
+
+
+

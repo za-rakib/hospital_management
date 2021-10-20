@@ -1,0 +1,31 @@
+ .navbar-main{
+     /* background-color: #35374b; */
+     background-image: linear-gradient(to bottom right, #405382, #416b8e)
+ }
+ .navbar-toggler-icon {
+ font-size: 50px;
+ }
+ .navbar-main a{
+    font-size: 25px;
+    color: white;
+    font-weight:600;
+}
+.navbar-main a:hover{
+    color: #0fc4e4;
+    font-weight:600;
+}
+.name h2{
+    font-weight: 900;
+    color: #ffffff;
+    font-size:35px;
+    /* letter-spacing: -5px; */
+    word-spacing: 5px;
+}
+.name span{
+    color:#2cdfff;
+}
+.nav-img{
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+}
