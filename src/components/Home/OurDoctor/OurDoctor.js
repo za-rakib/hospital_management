@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelopeOpenText,
-  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 

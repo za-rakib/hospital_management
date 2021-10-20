@@ -32,15 +32,12 @@ const SocialAuth = ({ setLoggedInUser, user, setUser }) => {
         history.replace(from);
         //console.log(displayName, email, photoURL);
         var credential = result.credential;
-        var token = credential.accessToken;
+        console.log(credential);
+        // var token = credential.accessToken;
       })
       .catch((error) => {
         const signedInUser = [...user];
         signedInUser.success = false;
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
       });
   };
 
@@ -52,15 +49,16 @@ const SocialAuth = ({ setLoggedInUser, user, setUser }) => {
       .signInWithPopup(fbProvider)
       .then((result) => {
         var credential = result.credential;
-        var user = result.user;
+        // var user = result.user;
         var accessToken = credential.accessToken;
+        console.log(accessToken);
         //console.log(user);
       })
       .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        var email = error.email;
-        var credential = error.credential;
+        // var errorCode = error.code;
+        // var errorMessage = error.message;
+        // var email = error.email;
+        // var credential = error.credential;
       });
   };
   return (

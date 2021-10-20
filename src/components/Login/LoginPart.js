@@ -19,7 +19,7 @@ if (!firebase.apps.length) {
 
 const LoginPart = () => {
 
-  const [loggedInUser, setLoggedInUser] =useContext(UserContext)
+  const [ setLoggedInUser] =useContext(UserContext)
    let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -34,9 +34,7 @@ const LoginPart = () => {
     success: false,
   });
   const {
-    register,
-    handleSubmit,
-    formState: { errors },
+    handleSubmit
   } = useForm();
 
   

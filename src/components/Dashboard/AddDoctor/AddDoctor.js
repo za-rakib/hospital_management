@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import Button from "../../UI/Button/Button";
 import Sidebar from "../Sidebar/Sidebar";
 import "./AddDoctor.css";
 const AddDoctor = () => {
@@ -11,16 +10,10 @@ const AddDoctor = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
   } = useForm();
 
 
-  // const handleBlur = (e) => {
-  //   const newInfo = { ...info };
-  //   newInfo[e.target.name] = e.target.value;
-  //   setInfo(newInfo);
-  // };
-
+ 
   const handleImageUpload = async (e) => {
     //console.log(e);
     const imageData = await new FormData();
