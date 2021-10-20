@@ -4,7 +4,6 @@ import { Home } from "./components/Home/Home/Home";
 import Appointment from "./components/Appointment/Appointment/Appointment";
 import Login from "./components/Login/Login";
 import { createContext, useState } from "react";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Dashboard/Dashboard";
 import AllPatients from "./components/Dashboard/AllPatients/AllPatients";
 import AddDoctor from "./components/Dashboard/AddDoctor/AddDoctor";
