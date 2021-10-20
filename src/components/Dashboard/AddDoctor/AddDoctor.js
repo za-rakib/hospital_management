@@ -7,13 +7,13 @@ const AddDoctor = () => {
   // const [info, setInfo] = useState({});
 
   const [file, setFile] = useState("");
+  console.log("file",file);
   const {
     register,
     handleSubmit,
   } = useForm();
 
 
- 
   const handleImageUpload = async (e) => {
     //console.log(e);
     const imageData = await new FormData();
@@ -23,7 +23,7 @@ const AddDoctor = () => {
       .post("https://api.imgbb.com/1/upload", imageData)
       .then(function (response) {
         setFile(response.data.data.display_url);
-        //console.log(response.data.data.display_url);
+       // console.log(response.data.data.display_url);
       })
       .catch(function (error) {
         //console.log(error);

@@ -7,13 +7,13 @@ import {
   faCalendarCheck,
   faUserFriends,
   faHouseUser,
-  faUserMd,
 } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../../App";
 
 const Sidebar = () => {
   const [loggedInUser] = useContext(UserContext);
   const [isDoctor, setDoctor] = useState(false);
+  console.log(isDoctor);
   useEffect(() => {
     fetch("https://glacial-everglades-10374.herokuapp.com/isDoctor", {
       method: "POST",
@@ -34,7 +34,7 @@ const Sidebar = () => {
         <Link to="/home" className="icon-a">
           <FontAwesomeIcon icon={faHouseUser} /> &nbsp;&nbsp; Home
         </Link>
-        { isDoctor &&
+       
           <div>
             <Link to="/appointment" className="icon-a">
               <FontAwesomeIcon icon={faCalendarCheck} /> &nbsp;&nbsp;Appointment
@@ -42,11 +42,10 @@ const Sidebar = () => {
             <Link to="/patients" className="icon-a">
               <FontAwesomeIcon icon={faUserFriends} /> &nbsp;&nbsp;Patients
             </Link>
-            <Link to="/addDoctor" className="icon-a">
+            {/* <Link to="/addDoctor" className="icon-a">
               <FontAwesomeIcon icon={faUserMd} /> &nbsp;&nbsp; Add Doctor
-            </Link>
+            </Link> */}
           </div>
-        }
       </div>
     </div>
   );
