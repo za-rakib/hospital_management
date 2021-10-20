@@ -8,14 +8,13 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { UserContext } from "../../../App";
 import SocialAuth from "../SocialAuth";
 const SignUp = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [ setLoggedInUser] = useContext(UserContext);
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
   const {
     register,
     handleSubmit,
-    formState: { errors },
   } = useForm();
   const [newUser, setNewUser] = useState({
     isSignup: false,
@@ -38,7 +37,7 @@ const SignUp = () => {
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         // Signed in
-        var user = userCredential.user;
+        // var user = userCredential.user;
        //console.log(user);
 
         let newUserInfo = { ...newUser };
@@ -70,7 +69,7 @@ const SignUp = () => {
           });
       })
       .catch((error) => {
-        var error = error.message;
+        // var error = error.message;
         const newUserInfo = { ...newUser };
         newUserInfo.error = error;
         newUserInfo.success = false;
